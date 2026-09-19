@@ -44,3 +44,22 @@ section {
 footer {
     padding: 32px 0;
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    section {
+        padding: 40px 0;
+    }
+    header,
+    main,
+    footer {
+        width: min(100% - 24px, 1200px);
+    }
+}
