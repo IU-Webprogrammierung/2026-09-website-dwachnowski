@@ -71,6 +71,10 @@ header nav a:focus {
 }
 
 @media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
     header {
         flex-direction: row;
         align-items: center;
@@ -89,45 +93,81 @@ header nav a:focus {
 
     header nav a {
         font-size: 0.95rem;
+
+        .project-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
     }
-}
 
-main {
-    width: min(1200px, calc(100% - 40px));
-    margin: 0 auto;
-}
+    main {
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+    }
 
-.hero {
-    padding: 96px 0 72px;
-    max-width: 760px;
-}
+    .hero {
+        padding: 96px 0 72px;
+        max-width: 760px;
+    }
 
-.hero h1 {
-    margin: 0 0 16px;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 1.05;
-}
+    .hero h1 {
+        margin: 0 0 16px;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        line-height: 1.05;
+    }
 
-.hero p {
-    max-width: 680px;
-    margin-bottom: 24px;
-}
+    .hero p {
+        max-width: 680px;
+        margin-bottom: 24px;
+    }
 
-.button {
-    display: inline-block;
-    padding: 12px 20px;
-    margin-right: 12px;
-    border: 1px solid #111111;
-    border-radius: 6px;
-    font-weight: 600;
-}
+    .button {
+        display: inline-block;
+        padding: 12px 20px;
+        margin-right: 12px;
+        border: 1px solid #111111;
+        border-radius: 6px;
+        font-weight: 600;
+    }
 
-.button:hover,
-.button:focus {
-    background-color: #111111;
-    color: #ffffff;
-}
+    .button:hover,
+    .button:focus {
+        background-color: #111111;
+        color: #ffffff;
+    }
 
-.button-secondary {
-    background-color: #f3f3f3;
+    .button-secondary {
+        background-color: #f3f3f3;
+    }
+
+    .projects-preview {
+        padding: 72px 0;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .project-card {
+        padding: 28px;
+        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        background-color: #ffffff;
+        min-height: 220px;
+    }
+
+    .project-card h3 {
+        margin-top: 0;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        transition: transform 0.2s ease;
+    }
+
+    .project-card p {
+        margin-bottom: 0;
+    }
 }
