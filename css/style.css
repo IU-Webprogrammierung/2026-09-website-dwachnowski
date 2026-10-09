@@ -91,3 +91,43 @@ header nav a:focus {
         font-size: 0.95rem;
     }
 }
+
+main {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 96px 0 72px;
+    max-width: 760px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+}
+
+.hero p {
+    max-width: 680px;
+    margin-bottom: 24px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-right: 12px;
+    border: 1px solid #111111;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.button-secondary {
+    background-color: #f3f3f3;
+}
