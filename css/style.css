@@ -247,6 +247,16 @@ footer nav a:focus {
     margin-bottom: 24px;
 }
 
+.career-hero {
+    padding: 72px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.career-hero p {
+    max-width: 680px;
+    margin-bottom: 24px;
+}
+
 
 
 
