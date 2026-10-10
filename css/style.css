@@ -70,6 +70,48 @@ header nav a:focus {
     text-decoration: underline;
 }
 
+.career-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 72px 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+.career-preview>div:first-child {
+    max-width: 620px;
+}
+
+.career-steps {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.career-steps span {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #111111;
+    border-radius: 50%;
+}
+
+.career-steps span:not(:last-child)::after {
+    content: "";
+}
+
+.contact-cta {
+    padding: 72px 0;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.contact-cta p {
+    max-width: 650px;
+    margin-bottom: 24px;
+}
+
+
 @media (max-width: 768px) {
     .project-grid {
         grid-template-columns: 1fr;
@@ -170,4 +212,20 @@ header nav a:focus {
     .project-card p {
         margin-bottom: 0;
     }
+
+    .career-preview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .career-steps {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .career-steps span {
+        width: 44px;
+        height: 44px;
+    }
+
 }
