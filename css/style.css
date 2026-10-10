@@ -190,6 +190,34 @@ footer nav a:focus {
     margin: 0;
 }
 
+.skills-section {
+    padding: 72px 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.skill-card {
+    min-height: 180px;
+    padding: 28px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.skill-card h3 {
+    margin-top: 0;
+}
+
+.skill-card p {
+    margin-bottom: 0;
+}
+
+
 
 
 
@@ -330,6 +358,11 @@ footer nav a:focus {
     .focus-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
 
 
 
