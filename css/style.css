@@ -350,6 +350,35 @@ footer nav a:focus {
     outline-offset: 2px;
 }
 
+.contact-details {
+    padding: 72px 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 32px 0;
+    font-style: normal;
+}
+
+.contact-list p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links h3 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
 
 
 
@@ -518,6 +547,11 @@ footer nav a:focus {
     .timeline-date {
         font-size: 0.95rem;
     }
+
+    .contact-list {
+        grid-template-columns: 1fr;
+    }
+
 
 
 
