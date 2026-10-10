@@ -136,6 +136,37 @@ footer nav a:focus {
     text-decoration: underline;
 }
 
+.about-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 64px;
+    align-items: center;
+    padding: 72px 0;
+}
+
+.about-text {
+    max-width: 680px;
+}
+
+.about-intro {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.about-photo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-image {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -262,6 +293,16 @@ footer nav a:focus {
     footer nav {
         flex-wrap: wrap;
     }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-photo {
+        justify-content: flex-start;
+    }
+
 
 
 }
