@@ -217,6 +217,26 @@ footer nav a:focus {
     margin-bottom: 0;
 }
 
+.projects-section {
+    padding: 72px 0;
+}
+
+.projects-section>p {
+    max-width: 680px;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.projects-grid .project-card {
+    min-height: 220px;
+}
+
+
 
 
 
@@ -362,6 +382,11 @@ footer nav a:focus {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
 
 
 
