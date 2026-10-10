@@ -24,38 +24,43 @@
     </header>
 
     <main>
-
-        <section>
+        <section class="contact-hero">
             <h1>Kontakt</h1>
+
             <p>
                 Du hast eine Frage, ein Projekt im Kopf
                 oder möchtest einfach Hallo sagen?
+            </p>
+
+            <p>
                 Ich freue mich auf deine Nachricht.
             </p>
         </section>
 
-        <section>
-            <h2>Nachricht senden</h2>
-
-            <form>
-                <div>
+        <section class="contact-form-section">
+            <form class="contact-form">
+                <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="email">E-Mail</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="max@beispiel.de" required>
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="message">Nachricht</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+                    <textarea id="message" name="message" rows="7" placeholder="Deine Nachricht..." required></textarea>
                 </div>
 
-                <button type="submit">Nachricht senden</button>
+                <button class="button" type="submit">
+                    Nachricht senden
+                </button>
             </form>
         </section>
+
+
 
         <section>
             <h2>Kontaktmöglichkeiten</h2>

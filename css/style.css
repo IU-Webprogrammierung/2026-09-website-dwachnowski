@@ -307,6 +307,49 @@ footer nav a:focus {
     margin: 0;
 }
 
+.contact-hero {
+    padding: 72px 0 40px;
+    max-width: 720px;
+}
+
+.contact-form-section {
+    padding: 32px 0 72px;
+}
+
+.contact-form {
+    max-width: 720px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #111111;
+    outline-offset: 2px;
+}
+
 
 
 
