@@ -85,7 +85,7 @@ ul {
 header {
     width: min(1200px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 24px 0;
+    padding: 22px 0;
 
     display: flex;
     justify-content: space-between;
@@ -95,24 +95,43 @@ header {
 }
 
 header>a {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 header nav ul {
     display: flex;
-    gap: 28px;
+    gap: 10px;
+    align-items: center;
 }
 
 header nav a {
-    font-size: 1rem;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    color: var(--text-muted);
+    font-size: 0.95rem;
     font-weight: 500;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 header nav a:hover,
 header nav a:focus {
-    text-decoration: underline;
+    background-color: var(--surface);
+    color: var(--text);
+    text-decoration: none;
 }
+
+
+header {
+    position: relative;
+}
+
 
 .career-preview {
     display: flex;
