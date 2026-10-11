@@ -1,3 +1,17 @@
+:root {
+    --bg: #1f2329;
+    --surface: #292f36;
+    --surface-light: #343b44;
+
+    --text: #f3f4f6;
+    --text-muted: #b7bec8;
+
+    --accent: #7f95ad;
+    --accent-hover: #9cafc2;
+
+    --border: #3f4752;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,14 +20,44 @@ html,
 body {
     margin: 0;
     line-height: 1.6;
-    font-family: Arial, sans-serif;
-    color: #111111;
-    background-color: #ffffff;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+body {
+    min-height: 100vh;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-muted);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 img {
     max-width: 100%;
@@ -47,7 +91,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid var(--border);
 }
 
 header>a {
@@ -76,7 +120,7 @@ header nav a:focus {
     align-items: center;
     gap: 48px;
     padding: 72px 0;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
 }
 
 .career-preview>div:first-child {
@@ -92,7 +136,7 @@ header nav a:focus {
 .career-steps span {
     width: 56px;
     height: 56px;
-    border: 2px solid #111111;
+    border: 2px solid var(--accent);
     border-radius: 50%;
 }
 
@@ -102,8 +146,8 @@ header nav a:focus {
 
 .contact-cta {
     padding: 72px 0;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .contact-cta p {
@@ -168,7 +212,7 @@ footer nav a:focus {
 
 .focus-section {
     padding: 72px 0;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
 }
 
 .focus-grid {
@@ -192,7 +236,7 @@ footer nav a:focus {
 
 .skills-section {
     padding: 72px 0;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
 }
 
 .skills-grid {
@@ -204,9 +248,9 @@ footer nav a:focus {
 .skill-card {
     min-height: 180px;
     padding: 28px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--border);
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: var(--surface);
 }
 
 .skill-card h3 {
@@ -239,7 +283,7 @@ footer nav a:focus {
 .projects-cta {
     padding: 72px 0;
     margin-top: 72px;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
 }
 
 .projects-cta p {
@@ -249,7 +293,7 @@ footer nav a:focus {
 
 .career-hero {
     padding: 72px 0;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid var(--border);
 }
 
 .career-hero p {
@@ -273,7 +317,7 @@ footer nav a:focus {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #d9d9d9;
+    background-color: var(--border);
 }
 
 .timeline-item {
@@ -292,7 +336,7 @@ footer nav a:focus {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: #111111;
+    background-color: var(--accent);
 }
 
 .timeline-date {
@@ -335,10 +379,13 @@ footer nav a:focus {
 .form-group textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--border);
     border-radius: 8px;
+    background-color: var(--surface);
+    color: var(--text);
     font: inherit;
 }
+
 
 .form-group textarea {
     resize: vertical;
@@ -346,13 +393,13 @@ footer nav a:focus {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: 2px solid #111111;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 
 .contact-details {
     padding: 72px 0;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid var(--border);
 }
 
 .contact-list {
@@ -439,16 +486,29 @@ footer nav a:focus {
         display: inline-block;
         padding: 12px 20px;
         margin-right: 12px;
-        border: 1px solid #111111;
-        border-radius: 6px;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        background-color: var(--accent);
+        color: #ffffff;
         font-weight: 600;
+        transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
     }
 
     .button:hover,
     .button:focus {
-        background-color: #111111;
-        color: #ffffff;
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+        transform: translateY(-2px);
     }
+
+    .button-secondary {
+        background-color: transparent;
+        color: var(--text);
+    }
+
 
     .button-secondary {
         background-color: #f3f3f3;
@@ -466,9 +526,9 @@ footer nav a:focus {
 
     .project-card {
         padding: 28px;
-        border: 1px solid #d9d9d9;
+        border: 1px solid var(--border);
         border-radius: 10px;
-        background-color: #ffffff;
+        background-color: var(--surface);
         min-height: 220px;
     }
 
