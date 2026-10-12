@@ -16,6 +16,67 @@
     box-sizing: border-box;
 }
 
+main {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 110px 0 90px;
+    max-width: 820px;
+}
+
+.hero h1 {
+    margin: 0 0 20px;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.hero p {
+    max-width: 720px;
+    margin-bottom: 28px;
+    font-size: 1.08rem;
+    color: var(--text-muted);
+}
+
+.hero .button {
+    margin-top: 6px;
+}
+
+
+
+.projects-preview {
+    padding: 72px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--surface);
+    min-height: 220px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease;
+}
+
+.project-card p {
+    margin-bottom: 0;
+}
+
 html,
 body {
     margin: 0;
@@ -142,26 +203,6 @@ header {
     border-top: 1px solid var(--border);
 }
 
-.career-preview>div:first-child {
-    max-width: 620px;
-}
-
-.career-steps {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.career-steps span {
-    width: 56px;
-    height: 56px;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-}
-
-.career-steps span:not(:last-child)::after {
-    content: "";
-}
 
 .contact-cta {
     padding: 72px 0;
@@ -220,12 +261,14 @@ footer nav a:focus {
 .about-photo {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .about-image {
     width: 320px;
     max-width: 100%;
     height: auto;
+    display: block;
     border-radius: 12px;
 }
 
@@ -295,9 +338,35 @@ footer nav a:focus {
     gap: 24px;
 }
 
-.projects-grid .project-card {
+.project-card {
     min-height: 220px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--surface);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
+
+.project-card:hover {
+    transform: translateY(-4px);
+    background-color: var(--surface-light);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    margin-bottom: 0;
+}
+
+
 
 .projects-cta {
     padding: 72px 0;
@@ -512,71 +581,7 @@ footer nav a:focus {
     header nav a {
         font-size: 0.95rem;
 
-        .project-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-    }
 
-    main {
-        width: min(1200px, calc(100% - 40px));
-        margin: 0 auto;
-    }
-
-    .hero {
-        padding: 110px 0 90px;
-        max-width: 820px;
-    }
-
-    .hero h1 {
-        margin: 0 0 20px;
-        font-size: clamp(3rem, 7vw, 5.5rem);
-        line-height: 1;
-        letter-spacing: -0.04em;
-    }
-
-    .hero p {
-        max-width: 720px;
-        margin-bottom: 28px;
-        font-size: 1.08rem;
-        color: var(--text-muted);
-    }
-
-    .hero .button {
-        margin-top: 6px;
-    }
-
-
-
-    .projects-preview {
-        padding: 72px 0;
-    }
-
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .project-card {
-        padding: 28px;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        background-color: var(--surface);
-        min-height: 220px;
-    }
-
-    .project-card h3 {
-        margin-top: 0;
-    }
-
-    .project-card:hover {
-        transform: translateY(-4px);
-        transition: transform 0.2s ease;
-    }
-
-    .project-card p {
-        margin-bottom: 0;
     }
 
     .career-preview {
@@ -603,7 +608,9 @@ footer nav a:focus {
         flex-wrap: wrap;
     }
 
+
     .about-hero {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -645,12 +652,4 @@ footer nav a:focus {
     .contact-list {
         grid-template-columns: 1fr;
     }
-
-
-
-
-
-
-
-
 }
