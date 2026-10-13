@@ -563,6 +563,15 @@ footer nav a:focus {
     background-color: #000;
 }
 
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
 
 
 
