@@ -553,6 +553,18 @@ footer nav a:focus {
     margin-top: 6px;
 }
 
+.project-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+
+
 
 
 
