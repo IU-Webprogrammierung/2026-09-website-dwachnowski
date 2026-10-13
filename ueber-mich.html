@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
     <header>
         <a href="index.html">Duncan Wachnowski</a>
@@ -76,38 +77,62 @@
         <section class="skills-section">
             <h2>Meine Skills</h2>
 
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <h3>Office</h3>
-                    <p>Microsoft Word, Excel und PowerPoint</p>
-                </article>
+            <div class="skills-carousel">
 
-                <article class="skill-card">
-                    <h3>UX/UI & Web</h3>
-                    <p>Figma und grundlegende Webentwicklung</p>
-                </article>
+                <button class="carousel-button carousel-prev" type="button" aria-label="Vorheriger Skill">
+                    ←
+                </button>
 
-                <article class="skill-card">
-                    <h3>3D & Kreativsoftware</h3>
-                    <p>Blender</p>
-                </article>
+                <div class="skills-track">
 
-                <article class="skill-card">
-                    <h3>Design & Grafik</h3>
-                    <p>Adobe Photoshop, Illustrator, InDesign, Canva und Procreate</p>
-                </article>
+                    <article class="skill-card">
+                        <h3>Office</h3>
+                        <p>Microsoft Word, Excel und PowerPoint</p>
+                    </article>
 
-                <article class="skill-card">
-                    <h3>Foto & Video</h3>
-                    <p>Adobe Lightroom, CapCut und weitere Videotools</p>
-                </article>
+                    <article class="skill-card">
+                        <h3>UX/UI & Web</h3>
+                        <p>Figma und grundlegende Webentwicklung</p>
+                    </article>
 
-                <article class="skill-card">
-                    <h3>KI-Tools</h3>
-                    <p>ChatGPT, Microsoft Copilot, Gemini und weitere KI-Werkzeuge</p>
-                </article>
+                    <article class="skill-card">
+                        <h3>3D & Kreativsoftware</h3>
+                        <p>Blender</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Design & Grafik</h3>
+                        <p>
+                            Adobe Photoshop, Illustrator,
+                            InDesign, Canva und Procreate
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Foto & Video</h3>
+                        <p>
+                            Adobe Lightroom, CapCut
+                            und weitere Videotools
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>KI-Tools</h3>
+                        <p>
+                            ChatGPT, Microsoft Copilot,
+                            Gemini und weitere KI-Werkzeuge
+                        </p>
+                    </article>
+
+                </div>
+
+                <button class="carousel-button carousel-next" type="button" aria-label="Nächster Skill">
+                    →
+                </button>
+
             </div>
         </section>
+
 
 
     </main>
@@ -120,6 +145,70 @@
             <a href="#">Datenschutz</a>
         </nav>
     </footer>
+
+    <script>
+        const skillCards = document.querySelectorAll(
+            ".skills-track .skill-card"
+        );
+
+        const prevButton = document.querySelector(
+            ".carousel-prev"
+        );
+
+        const nextButton = document.querySelector(
+            ".carousel-next"
+        );
+
+        let currentSkill = 2;
+
+        function updateSkillsCarousel() {
+            skillCards.forEach((card, index) => {
+                card.classList.remove(
+                    "active",
+                    "previous",
+                    "next"
+                );
+
+                if (index === currentSkill) {
+                    card.classList.add("active");
+                }
+
+                if (
+                    index ===
+                    (currentSkill - 1 + skillCards.length) %
+                    skillCards.length
+                ) {
+                    card.classList.add("previous");
+                }
+
+                if (
+                    index ===
+                    (currentSkill + 1) %
+                    skillCards.length
+                ) {
+                    card.classList.add("next");
+                }
+            });
+        }
+
+        nextButton.addEventListener("click", () => {
+            currentSkill =
+                (currentSkill + 1) %
+                skillCards.length;
+
+            updateSkillsCarousel();
+        });
+
+        prevButton.addEventListener("click", () => {
+            currentSkill =
+                (currentSkill - 1 + skillCards.length) %
+                skillCards.length;
+
+            updateSkillsCarousel();
+        });
+
+        updateSkillsCarousel();
+    </script>
 
 </body>
 
