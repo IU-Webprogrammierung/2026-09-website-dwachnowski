@@ -572,6 +572,32 @@ footer nav a:focus {
     border-radius: 10px;
 }
 
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: zoom-in;
+}
+
+.project-gallery img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.project-gallery a:hover img {
+    transform: scale(1.04);
+}
+
 
 
 
