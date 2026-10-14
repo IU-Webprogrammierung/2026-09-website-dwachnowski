@@ -182,7 +182,8 @@ header nav a {
 }
 
 header nav a:hover,
-header nav a:focus {
+header nav a:focus,
+header nav a.active {
     background-color: var(--surface);
     color: var(--text);
     text-decoration: none;
@@ -890,7 +891,7 @@ footer nav a:focus {
         grid-template-columns: 1fr;
     }
 
-    .timeline-section > h2 {
+    .timeline-section>h2 {
         margin-left: 0;
         font-size: 1.7rem;
     }
