@@ -415,16 +415,6 @@ footer nav a:focus {
     line-height: 1.2;
 }
 
-.projects-cta {
-    padding: 72px 0;
-    margin-top: 72px;
-    border-top: 1px solid var(--border);
-}
-
-.projects-cta p {
-    max-width: 680px;
-    margin-bottom: 24px;
-}
 
 .timeline-section {
     width: min(900px, calc(100% - 40px));
