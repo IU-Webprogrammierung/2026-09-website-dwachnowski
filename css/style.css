@@ -413,65 +413,105 @@ footer nav a:focus {
     margin-bottom: 24px;
 }
 
-.career-hero {
-    padding: 72px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.career-hero p {
-    max-width: 680px;
-    margin-bottom: 24px;
-}
-
 .timeline-section {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
     padding: 72px 0;
 }
+
+.career-hero+.timeline-section {
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+    padding-top: 72px;
+}
+
+.timeline-section+.timeline-section {
+    border-top: 1px solid var(--border);
+}
+
+.timeline-section>h2 {
+    text-align: left;
+    margin: 0 0 48px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.timeline-section:last-of-type {
+    padding-bottom: 120px;
+}
+
 
 .timeline {
     position: relative;
-    margin-top: 40px;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 .timeline::before {
     content: "";
     position: absolute;
-    left: 180px;
+
     top: 0;
     bottom: 0;
+
+    left: 210px;
+
     width: 2px;
     background-color: var(--border);
 }
 
 .timeline-item {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 60px;
     position: relative;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 60px;
+
     padding: 0 0 48px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
 }
 
 .timeline-item::before {
     content: "";
+
     position: absolute;
-    left: 171px;
-    top: 6px;
+    top: 8px;
+    left: 201px;
+
     width: 18px;
     height: 18px;
+
     border-radius: 50%;
+
     background-color: var(--accent);
+    border: 3px solid var(--bg);
+
+    z-index: 2;
 }
 
 .timeline-date {
+    text-align: right;
+
+    color: var(--text);
     font-weight: 600;
 }
 
 .timeline-content h3 {
     margin: 0 0 6px;
+
+    color: var(--text);
+    font-size: 1.1rem;
 }
 
 .timeline-content p {
     margin: 0;
+    color: var(--text-muted);
 }
+
 
 .contact-hero {
     padding: 72px 0 40px;
@@ -814,6 +854,16 @@ footer nav a:focus {
         grid-template-columns: 1fr;
     }
 
+    .career-section {
+        width: min(100% - 32px, 900px);
+        padding: 56px 0;
+    }
+
+    .career-section h2 {
+        margin-bottom: 36px;
+        text-align: left;
+    }
+
     .timeline::before {
         left: 8px;
     }
@@ -821,7 +871,9 @@ footer nav a:focus {
     .timeline-item {
         grid-template-columns: 1fr;
         gap: 8px;
+
         padding-left: 36px;
+        padding-bottom: 40px;
     }
 
     .timeline-item::before {
@@ -829,10 +881,17 @@ footer nav a:focus {
     }
 
     .timeline-date {
+        text-align: left;
         font-size: 0.95rem;
     }
 
+
     .contact-list {
         grid-template-columns: 1fr;
+    }
+
+    .timeline-section > h2 {
+        margin-left: 0;
+        font-size: 1.7rem;
     }
 }
