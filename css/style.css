@@ -401,7 +401,19 @@ footer nav a:focus {
     margin-bottom: 0;
 }
 
+.project-cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    background-color: var(--surface-light);
+}
 
+.project-cta-card h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
 
 .projects-cta {
     padding: 72px 0;
