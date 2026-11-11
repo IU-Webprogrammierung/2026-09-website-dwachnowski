@@ -579,6 +579,11 @@ footer nav a:focus {
     margin: 0;
 }
 
+.contact-label {
+    font-weight: 600;
+    color: var(--text);
+}
+
 .social-links {
     display: flex;
     align-items: center;
