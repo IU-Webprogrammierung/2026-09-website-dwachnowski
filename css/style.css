@@ -194,6 +194,19 @@ header {
     position: relative;
 }
 
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+}
 
 .career-preview {
     display: flex;
@@ -794,25 +807,58 @@ footer nav a:focus {
     }
 
     header {
-        flex-direction: row;
+        flex-direction:row;
         align-items: center;
-        padding: 18px 0;
+        padding: 18px 0; 
     }
 
-    header nav ul {
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-
-    header>a {
+    header > a {
         font-size: 1.1rem;
     }
 
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    header nav.open {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 16px;
+        background-color: var(--bg);
+        border-top: 1px solid var(--border);
+        border-radius: 10px;
+    }
+
+    header nav.open {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
     header nav a {
+        display: block;
+        width: 100%;
+        padding: 12px;
         font-size: 0.95rem;
-
-
     }
 
     .career-preview {
@@ -901,5 +947,77 @@ footer nav a:focus {
     .timeline-section>h2 {
         margin-left: 0;
         font-size: 1.7rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .menu-toggle .hamburger {
+        width: 22px;
+        height: 2px;
+        background-color: var(--text);
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .menu-toggle .hamburger::before,
+    .menu-toggle .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        background-color: var(--text);
+        border-radius: 2px;
+    }
+
+    .menu-toggle .hamburger::before {
+        top: -7px;
+    }
+    .menu-toggle .hamburger::after {
+        top: 7px;
+    }
+
+    header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav .open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 16px;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 14px;
+    }
+
+    #main-nav {
+        background-color: #37414a;
     }
 }
