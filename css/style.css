@@ -804,6 +804,31 @@ footer nav a:focus {
     display: none;
 }
 
+.legal-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 72px 24px;
+}
+
+.legal-section h1 {
+    margin-bottom: 40px;
+}
+
+.legal-section h2 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.legal-section p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.legal-section a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 
 
 
