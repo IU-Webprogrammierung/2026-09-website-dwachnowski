@@ -517,9 +517,8 @@ footer nav a:focus {
 
     z-index: 2;
 
-    transform: 
-        translateX(-50%)
-        scale(calc(1 + var(--progress) * 0.55));
+    transform:
+        translateX(-50%) scale(calc(1 + var(--progress) * 0.55));
 
     transform-origin: center;
 
@@ -856,9 +855,76 @@ footer nav a:focus {
     text-decoration: underline;
 }
 
+.error-page {
+    min-height: 100vh;
+    margin: 0;
+}
 
+.error-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+}
 
+.error-content {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
 
+.error-code {
+    margin: 0;
+    font-size: clamp(7rem, 18vw, 13rem);
+    font-weight: 700;
+    line-height: 0.9;
+    color: var(--accent);
+}
+
+.error-content h1 {
+    margin: 32px 0 16px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.error-text {
+    max-width: 540px;
+    margin: 0 auto 32px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.error-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.error-button:hover {
+    transform: translateY (-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.error-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
 
 
 
@@ -868,12 +934,12 @@ footer nav a:focus {
     }
 
     header {
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
-        padding: 18px 0; 
+        padding: 18px 0;
     }
 
-    header > a {
+    header>a {
         font-size: 1.1rem;
     }
 
@@ -988,7 +1054,7 @@ footer nav a:focus {
 
     .timeline::before {
         left: 32px;
-        
+
     }
 
     .timeline-item {
@@ -1015,27 +1081,25 @@ footer nav a:focus {
     .timeline-item::before {
         left: 33px;
         transform:
-            translateX(-50%)
-            scale(calc(1 + var(--progress) * 0.35));
-        
+            translateX(-50%) scale(calc(1 + var(--progress) * 0.35));
+
         transform-origin: center;
         opacity: 1;
 
         will-change: transform;
 
     }
-    
+
     .timeline-date,
     .timeline-content {
         opacity: 1;
-        transform: 
-            translateX(calc(var(--progress) * 5px))
-            scale(calc(0.98 + var(--progress) * 0.06));
+        transform:
+            translateX(calc(var(--progress) * 5px)) scale(calc(0.98 + var(--progress) * 0.06));
 
-            transform-origin: left center;
+        transform-origin: left center;
 
-            will-change: transform;
-            
+        will-change: transform;
+
     }
 
     .timeline-date {
@@ -1090,6 +1154,7 @@ footer nav a:focus {
     .menu-toggle .hamburger::before {
         top: -7px;
     }
+
     .menu-toggle .hamburger::after {
         top: 7px;
     }
@@ -1127,7 +1192,8 @@ footer nav a:focus {
 
     .mobile-break {
         display: block;
-}}
+    }
+}
 
 
 
@@ -1161,10 +1227,9 @@ footer nav a:focus {
             translate(35%, -50%) scale(0.78);
     }
 
-    .carousel-prev
-    .carousel-next {
+    .carousel-prev .carousel-next {
         width: 48px;
         height: 48px;
         flex-shrink: 0;
-    }     
-}  
+    }
+}
