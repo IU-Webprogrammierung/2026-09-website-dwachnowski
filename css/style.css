@@ -489,6 +489,11 @@ footer nav a:focus {
     gap: 60px;
 
     padding: 0 0 48px;
+
+    --progress: 0;
+
+    opacity: 1;
+
 }
 
 .timeline-item:last-child {
@@ -500,7 +505,7 @@ footer nav a:focus {
 
     position: absolute;
     top: 8px;
-    left: 201px;
+    left: 211px;
 
     width: 18px;
     height: 18px;
@@ -511,6 +516,22 @@ footer nav a:focus {
     border: 3px solid var(--bg);
 
     z-index: 2;
+
+    transform: 
+        translateX(-50%)
+        scale(calc(1 + var(--progress) * 0.55));
+
+    transform-origin: center;
+
+
+    will-change: transform;
+}
+
+.timeline-date,
+.timeline-content {
+    transform: scale(calc(0.96 + var(--progress) * 0.06));
+    transition: none;
+    will-change: transform;
 }
 
 .timeline-date {
@@ -518,6 +539,12 @@ footer nav a:focus {
 
     color: var(--text);
     font-weight: 600;
+
+    transform-origin: right center;
+}
+
+.timeline-content {
+    transform-origin: left center;
 }
 
 .timeline-content h3 {
@@ -952,20 +979,63 @@ footer nav a:focus {
         text-align: left;
     }
 
+    .timeline {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
     .timeline::before {
-        left: 8px;
+        left: 32px;
+        
     }
 
     .timeline-item {
+        --progress: 0;
+
+        position: relative;
+        display: grid;
+
         grid-template-columns: 1fr;
         gap: 8px;
 
-        padding-left: 36px;
-        padding-bottom: 40px;
+        padding-left: 72px;
+
+        opacity: 1;
+
     }
 
+    .timeline-item:last-child {
+        padding-bottom: 0;
+
+    }
+
+
     .timeline-item::before {
-        left: 0;
+        left: 33px;
+        transform:
+            translateX(-50%)
+            scale(calc(1 + var(--progress) * 0.35));
+        
+        transform-origin: center;
+        opacity: 1;
+
+        will-change: transform;
+
+    }
+    
+    .timeline-date,
+    .timeline-content {
+        opacity: 1;
+        transform: 
+            translateX(calc(var(--progress) * 5px))
+            scale(calc(0.98 + var(--progress) * 0.06));
+
+            transform-origin: left center;
+
+            will-change: transform;
+            
     }
 
     .timeline-date {

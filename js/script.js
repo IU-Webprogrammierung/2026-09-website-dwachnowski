@@ -83,3 +83,38 @@ if (menuToggle && mainNav) {
     });
 }
     
+
+const timelineItems = document.querySelectorAll(
+    ".timeline-item"
+);
+function animateTimelineItems() {
+    const viewportCenter = window.innerHeight / 2;
+
+    timelineItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+
+        const itemCenter = rect.top + rect.height / 2;
+
+        const distanceFromCenter = Math.abs(
+            viewportCenter - itemCenter
+        );
+
+        const range = window.innerHeight * 0.28;
+
+        let progress = 1 - distanceFromCenter / range;
+        
+        progress = Math.max(0, Math.min(1, progress));
+
+        progress =
+            progress * progress * (3 -2 * progress);
+
+        item.style.setProperty(
+            "--progress",
+            progress.toFixed(3)
+        );
+    });
+
+    requestAnimationFrame(animateTimelineItems);
+}
+
+requestAnimationFrame(animateTimelineItems);
