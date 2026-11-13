@@ -1,3 +1,4 @@
+//Skills-Carousel
 const skillCards = document.querySelectorAll(
             ".skills-track .skill-card"
         );
@@ -60,7 +61,7 @@ if (skillCards.length > 0 && prevButton && nextButton) {
 
         updateSkillsCarousel();
         }
-
+// Hamburgernavigation
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector("#main-nav");
 
@@ -83,7 +84,7 @@ if (menuToggle && mainNav) {
     });
 }
     
-
+// Timeline-Scrollanimation
 const timelineItems = document.querySelectorAll(
     ".timeline-item"
 );
@@ -118,3 +119,33 @@ function animateTimelineItems() {
 }
 
 requestAnimationFrame(animateTimelineItems);
+
+// Light/Dark-Mode
+const themeToggle = document.querySelector(".theme-toggle");
+
+if (themeToggle) {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeToggle.textContent = "🌙";
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+        themeToggle.textContent = "☀️";
+    }
+
+    themeToggle.addEventListener("click", () => {
+        const isLight =
+            document.documentElement.getAttribute("data-theme") === "light";
+        
+        if (isLight) {
+            document.documentElement.removeAttribute("data-theme");
+            localStorage.setItem("theme", "dark");
+            themeToggle.textContent = "☀️";
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+            themeToggle.textContent = "🌙";
+        }
+    });
+}
