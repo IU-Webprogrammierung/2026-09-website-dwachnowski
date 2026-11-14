@@ -1067,6 +1067,57 @@ html:not([data-theme="light"]) .theme-thumb {
     transform: translateX(38px);
 }
 
+.back-to-top {
+    position: fixed;
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    margin-left: -23px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.back-to-top:hover {
+    background-color: var(--surface-light);
+    transform: translateY(-2px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid var (var(--accent));
+    outline-offset: 3px;
+}
 
 
 @media (max-width: 768px) {
@@ -1383,6 +1434,16 @@ html:not([data-theme="light"]) .theme-thumb {
         border-color: #b9aaa2;
         background-color: transparent;
     }
+
+    .back-to-top {
+        left: auto;
+        right: 16px;
+        bottom: 16px;
+        margin-left: 0;
+
+        width: 42px;
+        height: 42px;
+     }
 }
 
 

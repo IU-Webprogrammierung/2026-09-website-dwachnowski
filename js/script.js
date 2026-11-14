@@ -182,3 +182,23 @@ if (themeToggle) {
         setTheme(isLight ? "dark" : "light");
     });
 }
+
+// Back-to-top Button
+const backToTopButton = document.querySelector(".back-to-top");
+
+if (backToTopButton) {
+    window.addEventListener("scroll", () => {
+        if  (window.scrollY > 400) {
+            backToTopButton.classList.add("visible");
+        } else {
+            backToTopButton.classList.remove("visible");
+        }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
