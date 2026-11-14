@@ -164,13 +164,6 @@ function setTheme(theme) {
     updateAboutImage();
 }
 
-const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "light") {
-        document.documentElement.setAttribute("data-type", "light");
-    } else {
-        document.documentElement.removeAttribute("data-theme");
-}
 
 updateThemeButton();
 updateAboutImage();

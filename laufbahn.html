@@ -4,6 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    </script>
+    
     <title>Laufbahn | Duncan Wachnowski</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -56,7 +65,7 @@
                 Mein Weg durch Studium, Beruf und persönliche Verantwortung.
             </p>
 
-            <a class="button" href="documents/lebenslauf-duncan-wachnowski.pdf" target="_blank"
+            <a class="button cv-download" href="documents/lebenslauf-duncan-wachnowski.pdf" target="_blank"
                 rel="noopener noreferrer">
                 Lebenslauf als PDF
             </a>

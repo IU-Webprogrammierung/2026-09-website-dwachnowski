@@ -1484,3 +1484,59 @@ html:not([data-theme="light"]) .theme-thumb {
         flex-shrink: 0;
     }
 }
+
+@media print {
+
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    header,
+    footer,
+    .theme-toggle,
+    .menu-toggle,
+    .back-to-top {
+        display: none !important;
+    }
+
+    main {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cv-download {
+        display: none !important;
+    }
+
+    .timeline-section {
+        margin: 0;
+        padding: 0;
+    }
+
+    .timeline {
+        max-width: none;
+        margin: 0;  
+    }
+
+    .timeline-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .timeline-item::before {
+        transform: none !important;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    
+}
