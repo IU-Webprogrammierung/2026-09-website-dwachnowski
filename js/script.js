@@ -122,30 +122,63 @@ requestAnimationFrame(animateTimelineItems);
 
 // Light/Dark-Mode
 const themeToggle = document.querySelector(".theme-toggle");
+const aboutImage = document.getElementById("about-image");
 
-if (themeToggle) {
-    const savedTheme = localStorage.getItem("theme");
+function updateAboutImage() {
+    if (!aboutImage) return;
 
-    if (savedTheme === "light") {
+    const isLight =
+            document.documentElement.getAttribute("data-theme") === "light";
+
+        aboutImage.src = isLight
+            ? "images/bewerbungsfoto-light.jpg"
+            : "images/bewerbungsfoto-dark.jpg";
+}
+
+function updateThemeButton() {
+    if (!themeToggle) return;
+
+    const isLight = 
+        document.documentElement.getAttribute("data-theme") === "light";
+
+        themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isLight
+                ? "Zu dunklem Design wechseln"
+                : "Zu hellem Design wechseln"
+        );
+}
+
+function setTheme(theme) {
+    if (theme === "light") {
         document.documentElement.setAttribute("data-theme", "light");
-        themeToggle.textContent = "🌙";
     } else {
         document.documentElement.removeAttribute("data-theme");
-        themeToggle.textContent = "☀️";
     }
 
+    localStorage.setItem("theme", theme);
+
+    updateThemeButton();
+    updateAboutImage();
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+        document.documentElement.setAttribute("data-type", "light");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+}
+
+updateThemeButton();
+updateAboutImage();
+
+if (themeToggle) {
     themeToggle.addEventListener("click", () => {
         const isLight =
             document.documentElement.getAttribute("data-theme") === "light";
-        
-        if (isLight) {
-            document.documentElement.removeAttribute("data-theme");
-            localStorage.setItem("theme", "dark");
-            themeToggle.textContent = "☀️";
-        } else {
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light");
-            themeToggle.textContent = "🌙";
-        }
+        setTheme(isLight ? "dark" : "light");
     });
 }

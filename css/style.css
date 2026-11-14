@@ -964,20 +964,21 @@ footer nav a:focus {
     outline-offset: 4px;
 }
 
-.theme-toggle {
+.theme-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+}
 
-    width: 44px;
-    height: 44px;
-    padding: 0;
+.theme-toggle {
+    width: 78px;
+    height: 40px;
+    padding: 4px;
 
-    background: transparent;
-    color: var(--text);
+    position: relative;
 
+    background-color: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 999px;
 
     cursor: pointer;
 
@@ -997,19 +998,57 @@ footer nav a:focus {
     outline-offset: 3px;
 }
 
-.theme-icon {
-    font-size: 1.3rem;
+.theme-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+.theme-sun,
+.theme-moon {
+    position: relative;
+    z-index: 2;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.15rem;
     line-height: 1;
 }
 
-.theme-item {
-    display: flex;
-    align-items: center;
+.theme-thumb {
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+
+    width: 28px;
+    height: 28px;
+
+    background-color: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    transition: transform 0.3s ease;
 }
 
-.theme-label {
-    display: none;
- }
+[data-theme="light"] .theme-thumb {
+    transform: translateX(0);
+}
+
+html:not([data-theme="light"]) .theme-thumb {
+    transform: translateX(38px);
+}
+
 
 
 @media (max-width: 768px) {
@@ -1280,20 +1319,19 @@ footer nav a:focus {
 
     .theme-item {
         width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 8px;
     }
 
     .theme-toggle {
-        width: 100%;
-        min-height: 48px;
-        justify-content: flex-start;
-        padding: 12px 14px;
-        border-radius: 8px;
+        width: 78px;
+        height: 40px;
+        min-height: 40px;
+        padding: 4px;
+        border-radius: 999px;
     }
 
-    .theme-label {
-        display: inline;
-        margin-left: 10px;
-    }
 
     #main-nav {
         background-color: #141d22;

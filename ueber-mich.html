@@ -31,11 +31,15 @@
                     <button
                      class="theme-toggle"
                      type="button"
-                     aria-label="Design wechseln"
+                     aria-label="Zu hellem Design wechseln"
                      title="Design wechseln"
+                     aria-pressed="false"
                 >
-                <span class="theme-icon" aria-hidden="true">☀️</span>
-                <span class="theme-label">Design wechseln</span>
+                <span class="theme-switch" aria-hidden="true">
+                <span class="theme-sun">☀️</span>
+                <span class="theme-moon">🌙</span>
+                <span class="theme-thumb"></span>
+                </span>
 
                 </button>
 
@@ -59,7 +63,12 @@
             </div>
 
             <div class="about-photo">
-                <img class="about-image" src="images/bewerbungsfoto.jpg" alt="Porträt von Duncan Wachnowski">
+                <img 
+                    id="about-image"
+                    class="about-image"
+                    src="images/bewerbungsfoto-dark.jpg"
+                    alt="Porträt von Duncan Wachnowski">
+                
             </div>
         </section>
 
