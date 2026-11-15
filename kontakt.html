@@ -12,20 +12,21 @@
             document.documentElement.setAttribute("data-theme", "light");
         }
     </script>
-    
+
     <title>Kontakt | Duncan Wachnowski</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main-content">
+        Zum Hauptinhalt springen
+    </a>
+
     <header>
         <a href="index.html">Duncan Wachnowski</a>
-        <button class="menu-toggle"
-        aria-label="Navigation öffnen"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        >
+        <button class="menu-toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
             <span class="hamburger"></span>
         </button>
         <nav aria-label="Hauptnavigation" id="main-nav">
@@ -36,28 +37,23 @@
                 <li><a href="laufbahn.html">Laufbahn</a></li>
                 <li><a href="kontakt.html" class="active" aria-current="page">Kontakt</a></li>
 
-                 <li class="theme-item">
-                    <button
-                     class="theme-toggle"
-                     type="button"
-                     aria-label="Zu hellem Design wechseln"
-                     title="Design wechseln"
-                     aria-pressed="false"
-                >
-                <span class="theme-switch" aria-hidden="true">
-                <span class="theme-sun">☀️</span>
-                <span class="theme-moon">🌙</span>
-                <span class="theme-thumb"></span>
-                </span>
+                <li class="theme-item">
+                    <button class="theme-toggle" type="button" aria-label="Zu hellem Design wechseln"
+                        title="Design wechseln" aria-pressed="false">
+                        <span class="theme-switch" aria-hidden="true">
+                            <span class="theme-sun">☀️</span>
+                            <span class="theme-moon">🌙</span>
+                            <span class="theme-thumb"></span>
+                        </span>
 
-                </button>
+                    </button>
 
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="contact-hero">
             <h1>Kontakt</h1>
 
@@ -72,47 +68,29 @@
         </section>
 
         <section class="contact-form-section">
+            <h2>Nachricht senden</h2>
             <form class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        autocomplete="name"
-                        placeholder="Max Mustermann"
-                        required
-                        minlength="2"
-                        maxlength="60">
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Max Mustermann" required
+                        minlength="2" maxlength="60">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-Mail</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        placeholder="max@beispiel.de"
-                        required
-                        maxlength="100">
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="max@beispiel.de"
+                        required maxlength="100">
                 </div>
 
                 <div class="form-group">
                     <label for="message">Nachricht</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="7" 
-                        placeholder="Deine Nachricht..."
-                        required
-                        minlength="10"
-                        maxlength="1000"></textarea>
+                    <textarea id="message" name="message" rows="7" placeholder="Deine Nachricht..." required
+                        minlength="10" maxlength="1000"></textarea>
                 </div>
 
                 <button class="button" type="submit">
                     Nachricht senden
-                </button> 
+                </button>
             </form>
         </section>
 
@@ -143,11 +121,13 @@
             <div class="social-links">
                 <h3>Folge mir</h3>
 
-                <a href="https://www.instagram.com/duncan.wa/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/duncan.wa/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram-Profil in neuem Tab öffnen">
                     Instagram
                 </a>
 
-                <a href="https://www.linkedin.com/in/duncan-wachnowski/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/duncan-wachnowski/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn-Profil in neuem Tab öffnen">
                     LinkedIn
                 </a>
             </div>
@@ -164,15 +144,11 @@
         </nav>
     </footer>
 
-    <button
-        class="back-to-top"
-        aria-label="Zurück nach oben"
-        title="Zurück nach oben"
-    >
+    <button class="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">
         ↑
     </button>
 
-<script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 
 </body>
 

@@ -20,7 +20,7 @@
     --surface-light: #f0eee9;
 
     --text: #4a3434;
-    --text-muted: #756461;
+    --text-muted: #6b5653;
 
     --accent: #6b3f46;
     --accent-hover: #80505a;
@@ -375,7 +375,7 @@ footer nav a:focus {
 }
 
 [data-theme="light"] .focus-card {
-    background-color: #8a7470;
+    background-color: #806966;
     color: #ffffff;
     border-color: #9a8580;
 }
@@ -724,9 +724,9 @@ footer nav a:focus {
     display: inline-block;
     padding: 12px 20px;
     margin-right: 12px;
-    border: 1px solid var(--accent);
+    border: 1px solid #52677b;
     border-radius: 8px;
-    background-color: var(--accent);
+    background-color: #52677b;
     color: #ffffff;
     font-weight: 600;
     transition:
@@ -737,8 +737,8 @@ footer nav a:focus {
 
 .button:hover,
 .button:focus {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
+    background-color: #465b6e;
+    border-color: #465b6e;
     transform: translateY(-2px);
 }
 
@@ -752,6 +752,19 @@ footer nav a:focus {
 .button-secondary:focus {
     background-color: var(--surface);
     border-color: var(--surface-light);
+}
+
+[data-theme="light"] .button {
+    background-color: #6b4748;
+    border-color: #6b4748;
+    color: #ffffff;
+}
+
+[data-theme="light"] .button:hover,
+[data-theme="light"] .button:focus {
+    background-color: #583a3b;
+    border-color: #583a3b;
+    color: #ffffff;
 }
 
 
@@ -1144,6 +1157,27 @@ html:not([data-theme="light"]) .theme-thumb {
     outline-offset: 3px;
 }
 
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 16px;
+    z-index: 1000;
+
+    padding: 10px 16px;
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
 
 @media (max-width: 768px) {
     .project-grid {
@@ -1450,7 +1484,7 @@ html:not([data-theme="light"]) .theme-thumb {
     }
 
     [data-theme="light"] .theme-toggle {
-        color: #6b4646;
+        color: #4f4234;
         background-color: #b9aaa2;
     }
 

@@ -1,66 +1,66 @@
 //Skills-Carousel
 const skillCards = document.querySelectorAll(
-            ".skills-track .skill-card"
+    ".skills-track .skill-card"
+);
+
+const prevButton = document.querySelector(
+    ".carousel-prev"
+);
+
+const nextButton = document.querySelector(
+    ".carousel-next"
+);
+
+let currentSkill = 2;
+
+function updateSkillsCarousel() {
+    skillCards.forEach((card, index) => {
+        card.classList.remove(
+            "active",
+            "previous",
+            "next"
         );
 
-        const prevButton = document.querySelector(
-            ".carousel-prev"
-        );
-
-        const nextButton = document.querySelector(
-            ".carousel-next"
-        );
-
-        let currentSkill = 2;
-
-        function updateSkillsCarousel() {
-            skillCards.forEach((card, index) => {
-                card.classList.remove(
-                    "active",
-                    "previous",
-                    "next"
-                );
-
-                if (index === currentSkill) {
-                    card.classList.add("active");
-                }
-
-                if (
-                    index ===
-                    (currentSkill - 1 + skillCards.length) %
-                    skillCards.length
-                ) {
-                    card.classList.add("previous");
-                }
-
-                if (
-                    index ===
-                    (currentSkill + 1) %
-                    skillCards.length
-                ) {
-                    card.classList.add("next");
-                }
-            });
+        if (index === currentSkill) {
+            card.classList.add("active");
         }
+
+        if (
+            index ===
+            (currentSkill - 1 + skillCards.length) %
+            skillCards.length
+        ) {
+            card.classList.add("previous");
+        }
+
+        if (
+            index ===
+            (currentSkill + 1) %
+            skillCards.length
+        ) {
+            card.classList.add("next");
+        }
+    });
+}
 if (skillCards.length > 0 && prevButton && nextButton) {
-        nextButton.addEventListener("click", () => {
-            currentSkill =
-                (currentSkill + 1) %
-                skillCards.length;
-
-            updateSkillsCarousel();
-        });
-
-        prevButton.addEventListener("click", () => {
-            currentSkill =
-                (currentSkill - 1 + skillCards.length) %
-                skillCards.length;
-
-            updateSkillsCarousel();
-        });
+    nextButton.addEventListener("click", () => {
+        currentSkill =
+            (currentSkill + 1) %
+            skillCards.length;
 
         updateSkillsCarousel();
-        }
+    });
+
+    prevButton.addEventListener("click", () => {
+        currentSkill =
+            (currentSkill - 1 + skillCards.length) %
+            skillCards.length;
+
+        updateSkillsCarousel();
+    });
+
+    updateSkillsCarousel();
+}
 // Hamburgernavigation
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector("#main-nav");
@@ -70,7 +70,7 @@ if (menuToggle && mainNav) {
         const isOpen = mainNav.classList.toggle("open");
         menuToggle.classList.toggle("open", isOpen);
         menuToggle.setAttribute("aria-expanded", isOpen);
-        menuToggle.setAttribute("aria-label", 
+        menuToggle.setAttribute("aria-label",
             isOpen ? "Navigation schließen" : "Navigation öffnen");
     });
 
@@ -83,7 +83,7 @@ if (menuToggle && mainNav) {
         });
     });
 }
-    
+
 // Timeline-Scrollanimation
 const timelineItems = document.querySelectorAll(
     ".timeline-item"
@@ -103,11 +103,11 @@ function animateTimelineItems() {
         const range = window.innerHeight * 0.28;
 
         let progress = 1 - distanceFromCenter / range;
-        
+
         progress = Math.max(0, Math.min(1, progress));
 
         progress =
-            progress * progress * (3 -2 * progress);
+            progress * progress * (3 - 2 * progress);
 
         item.style.setProperty(
             "--progress",
@@ -128,27 +128,27 @@ function updateAboutImage() {
     if (!aboutImage) return;
 
     const isLight =
-            document.documentElement.getAttribute("data-theme") === "light";
+        document.documentElement.getAttribute("data-theme") === "light";
 
-        aboutImage.src = isLight
-            ? "images/bewerbungsfoto-light.jpg"
-            : "images/bewerbungsfoto-dark.jpg";
+    aboutImage.src = isLight
+        ? "images/bewerbungsfoto-light.jpg"
+        : "images/bewerbungsfoto-dark.jpg";
 }
 
 function updateThemeButton() {
     if (!themeToggle) return;
 
-    const isLight = 
+    const isLight =
         document.documentElement.getAttribute("data-theme") === "light";
 
-        themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
+    themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
 
-        themeToggle.setAttribute(
-            "aria-label",
-            isLight
-                ? "Zu dunklem Design wechseln"
-                : "Zu hellem Design wechseln"
-        );
+    themeToggle.setAttribute(
+        "aria-label",
+        isLight
+            ? "Zu dunklem Design wechseln"
+            : "Zu hellem Design wechseln"
+    );
 }
 
 function setTheme(theme) {
@@ -181,7 +181,7 @@ const backToTopButton = document.querySelector(".back-to-top");
 
 if (backToTopButton) {
     window.addEventListener("scroll", () => {
-        if  (window.scrollY > 400) {
+        if (window.scrollY > 400) {
             backToTopButton.classList.add("visible");
         } else {
             backToTopButton.classList.remove("visible");

@@ -12,19 +12,20 @@
             document.documentElement.setAttribute("data-theme", "light");
         }
     </script>
-    
+
     <title>Laufbahn | Duncan Wachnowski</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main-content">
+        Zum Hauptinhalt springen
+    </a>
+
     <header>
         <a href="index.html">Duncan Wachnowski</a>
-        <button class="menu-toggle"
-        aria-label="Navigation öffnen"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        >
+        <button class="menu-toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
             <span class="hamburger"></span>
         </button>
         <nav aria-label="Hauptnavigation" id="main-nav">
@@ -35,28 +36,23 @@
                 <li><a href="laufbahn.html" class="active" aria-current="page">Laufbahn</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
 
-                 <li class="theme-item">
-                    <button
-                     class="theme-toggle"
-                     type="button"
-                     aria-label="Zu hellem Design wechseln"
-                     title="Design wechseln"
-                     aria-pressed="false"
-                >
-                <span class="theme-switch" aria-hidden="true">
-                <span class="theme-sun">☀️</span>
-                <span class="theme-moon">🌙</span>
-                <span class="theme-thumb"></span>
-                </span>
+                <li class="theme-item">
+                    <button class="theme-toggle" type="button" aria-label="Zu hellem Design wechseln"
+                        title="Design wechseln" aria-pressed="false">
+                        <span class="theme-switch" aria-hidden="true">
+                            <span class="theme-sun">☀️</span>
+                            <span class="theme-moon">🌙</span>
+                            <span class="theme-thumb"></span>
+                        </span>
 
-                </button>
+                    </button>
 
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <section class="career-hero">
             <h1>Meine Laufbahn</h1>
@@ -66,7 +62,7 @@
             </p>
 
             <a class="button cv-download" href="documents/lebenslauf-duncan-wachnowski.pdf" target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer" aria-label="Lebenslauf als PDF in neuem Tab öffnen">
                 Lebenslauf als PDF
             </a>
         </section>
@@ -75,9 +71,9 @@
         <section class="timeline-section">
             <h2>Berufserfahrung</h2>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">seit 06.2026</span>
+            <div class="timeline" role="list" aria-label="Berufserfahrung">
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">seit 06.2026</time>
 
                     <div class="timeline-content">
                         <h3>Werkstudent Security & Crisis Management</h3>
@@ -85,8 +81,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">05.2024 - 05.2026</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">05.2024 - 05.2026</time>
 
                     <div class="timeline-content">
                         <h3>Werkstudent IT-Anforderungsmanagement</h3>
@@ -94,8 +90,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">07.2023 - 05.2024</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">07.2023 - 05.2024</time>
 
                     <div class="timeline-content">
                         <h3>Werkstudent Internal Communications</h3>
@@ -103,8 +99,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">09.2020 - 07.2023</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">09.2020 - 07.2023</time>
 
                     <div class="timeline-content">
                         <h3>Kurierfahrer & Werkstudent Customer Service</h3>
@@ -118,9 +114,9 @@
         <section class="timeline-section">
             <h2>Bildung</h2>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">seit 10.2022</span>
+            <div class="timeline" role="list" aria-label="Bildung">
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">seit 10.2022</time>
 
                     <div class="timeline-content">
                         <h3>Mediendesign (B.A.)</h3>
@@ -128,8 +124,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">10.2020 - 03.2022</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">10.2020 - 03.2022</time>
 
                     <div class="timeline-content">
                         <h3>Soziologie (B.A., ohne Abschluss)</h3>
@@ -137,8 +133,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">07.2012 - 06.2020</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">07.2012 - 06.2020</time>
 
                     <div class="timeline-content">
                         <h3>Abitur</h3>
@@ -152,9 +148,9 @@
         <section class="timeline-section">
             <h2>Weitere Erfahrungen</h2>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-date">seit 02.2024</span>
+            <div class="timeline" role="list" aria-label="Weitere Erfahrungen">
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">seit 02.2024</time>
 
                     <div class="timeline-content">
                         <h3>Pflege meines Großvaters</h3>
@@ -162,8 +158,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="timeline-date">05.2022 - 08.2025</span>
+                <div class="timeline-item" role="listitem">
+                    <time class="timeline-date">05.2022 - 08.2025</time>
 
                     <div class="timeline-content">
                         <h3>Pflege meiner Mutter</h3>
@@ -185,15 +181,11 @@
         </nav>
     </footer>
 
-    <button
-        class="back-to-top"
-        aria-label="Zurück nach oben"
-        title="Zurück nach oben"
-    >
+    <button class="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">
         ↑
     </button>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

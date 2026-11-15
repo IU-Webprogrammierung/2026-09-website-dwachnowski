@@ -12,20 +12,21 @@
             document.documentElement.setAttribute("data-theme", "light");
         }
     </script>
-    
+
     <title>Impressum | Duncan Wachnowski</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+
+    <a class="skip-link" href="#main-content">
+        Zum Hauptinhalt springen
+    </a>
+
     <header>
         <a href="index.html">Duncan Wachnowski</a>
-        <button class="menu-toggle"
-        aria-label="Navigation öffnen"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        >
+        <button class="menu-toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
             <span class="hamburger"></span>
         </button>
         <nav aria-label="Hauptnavigation" id="main-nav">
@@ -36,39 +37,34 @@
                 <li><a href="laufbahn.html">Laufbahn</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
 
-                 <li class="theme-item">
-                    <button
-                     class="theme-toggle"
-                     type="button"
-                     aria-label="Zu hellem Design wechseln"
-                     title="Design wechseln"
-                     aria-pressed="false"
-                >
-                <span class="theme-switch" aria-hidden="true">
-                <span class="theme-sun">☀️</span>
-                <span class="theme-moon">🌙</span>
-                <span class="theme-thumb"></span>
-                </span>
+                <li class="theme-item">
+                    <button class="theme-toggle" type="button" aria-label="Zu hellem Design wechseln"
+                        title="Design wechseln" aria-pressed="false">
+                        <span class="theme-switch" aria-hidden="true">
+                            <span class="theme-sun">☀️</span>
+                            <span class="theme-moon">🌙</span>
+                            <span class="theme-thumb"></span>
+                        </span>
 
-                </button>
+                    </button>
 
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="legal-section">
             <h1>Impressum</h1>
 
             <h2>Angaben gemäß § 5 DDG</h2>
 
-            <p>
+            <address>
                 Duncan Wachnowski<br>
                 Am Freistein 18<br>
                 45141 Essen<br>
                 Deutschland
-            </p>
+            </address>
 
             <h2>Kontakt</h2>
 
@@ -76,9 +72,9 @@
                 E-Mail: <a href="mailto:d.wachnowski@gmail.com">
                     d.wachnowski@gmail.com
 
-                    </a>
+                </a>
             </p>
-            </section>
+        </section>
 
     </main>
 
@@ -86,20 +82,16 @@
         <p>© 2026 Duncan Wachnowski</p>
 
         <nav aria-label="Footer-Navigation">
-            <a href="impressum.html">Impressum</a>
+            <a href="impressum.html" aria-current="page">Impressum</a>
             <a href="datenschutz.html">Datenschutz</a>
         </nav>
     </footer>
 
-    <button
-        class="back-to-top"
-        aria-label="Zurück nach oben"
-        title="Zurück nach oben"
-    >
+    <button class="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">
         ↑
     </button>
 
-<script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 
 </body>
 

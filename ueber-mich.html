@@ -12,20 +12,21 @@
             document.documentElement.setAttribute("data-theme", "light");
         }
     </script>
-    
+
     <title>Über mich | Duncan Wachnowski</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
+
+    <a class="skip-link" href="#main-content">
+        Zum Hauptinhalt springen
+    </a>
+
     <header>
         <a href="index.html">Duncan Wachnowski</a>
-        <button class="menu-toggle"
-        aria-label="Navigation öffnen"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        >
+        <button class="menu-toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-nav">
             <span class="hamburger"></span>
         </button>
         <nav aria-label="Hauptnavigation" id="main-nav">
@@ -36,28 +37,23 @@
                 <li><a href="laufbahn.html">Laufbahn</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
 
-                 <li class="theme-item">
-                    <button
-                     class="theme-toggle"
-                     type="button"
-                     aria-label="Zu hellem Design wechseln"
-                     title="Design wechseln"
-                     aria-pressed="false"
-                >
-                <span class="theme-switch" aria-hidden="true">
-                <span class="theme-sun">☀️</span>
-                <span class="theme-moon">🌙</span>
-                <span class="theme-thumb"></span>
-                </span>
+                <li class="theme-item">
+                    <button class="theme-toggle" type="button" aria-label="Zu hellem Design wechseln"
+                        title="Design wechseln" aria-pressed="false">
+                        <span class="theme-switch" aria-hidden="true">
+                            <span class="theme-sun">☀️</span>
+                            <span class="theme-moon">🌙</span>
+                            <span class="theme-thumb"></span>
+                        </span>
 
-                </button>
+                    </button>
 
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <section class="about-hero">
             <div class="about-text">
@@ -72,12 +68,9 @@
             </div>
 
             <div class="about-photo">
-                <img 
-                    id="about-image"
-                    class="about-image"
-                    src="images/bewerbungsfoto-dark.jpg"
+                <img id="about-image" class="about-image" src="images/bewerbungsfoto-dark.jpg"
                     alt="Porträt von Duncan Wachnowski">
-                
+
             </div>
         </section>
 
@@ -131,7 +124,7 @@
         <section class="skills-section">
             <h2>Meine Skills</h2>
 
-            <div class="skills-carousel">
+            <div class="skills-carousel" role="region" aria-label="Meine Skills">
 
                 <button class="carousel-button carousel-prev" type="button" aria-label="Vorheriger Skill">
                     ←
@@ -200,15 +193,11 @@
         </nav>
     </footer>
 
-    <button
-        class="back-to-top"
-        aria-label="Zurück nach oben"
-        title="Zurück nach oben"
-    >
+    <button class="back-to-top" aria-label="Zurück nach oben" title="Zurück nach oben">
         ↑
     </button>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
