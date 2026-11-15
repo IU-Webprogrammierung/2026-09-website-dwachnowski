@@ -628,6 +628,31 @@ footer nav a:focus {
     max-width: 720px;
 }
 
+.contact-form input,
+.contact-form textarea {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2 ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(127, 149, 173, 0.2);
+}
+
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+    border-color: #c46b6b;
+}
+
+.contact-form input:valid:not(:placeholder-shown),
+.contact-form textarea:valid:not(:placeholder-shown) {
+    border-color: #6f9477;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -1443,7 +1468,7 @@ html:not([data-theme="light"]) .theme-thumb {
 
         width: 42px;
         height: 42px;
-     }
+    }
 }
 
 
@@ -1518,7 +1543,7 @@ html:not([data-theme="light"]) .theme-thumb {
 
     .timeline {
         max-width: none;
-        margin: 0;  
+        margin: 0;
     }
 
     .timeline-item {
@@ -1538,5 +1563,5 @@ html:not([data-theme="light"]) .theme-thumb {
         text-decoration: none;
     }
 
-    
+
 }
