@@ -131,8 +131,8 @@ function updateAboutImage() {
         document.documentElement.getAttribute("data-theme") === "light";
 
     aboutImage.src = isLight
-        ? "images/bewerbungsfoto-light.jpg"
-        : "images/bewerbungsfoto-dark.jpg";
+        ? "images/bewerbungsfoto-light.avif"
+        : "images/bewerbungsfoto-dark.avif";
 }
 
 function updateThemeButton() {
