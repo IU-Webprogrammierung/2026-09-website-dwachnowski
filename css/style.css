@@ -351,7 +351,7 @@ footer nav a:focus {
 
     border: 1px solid var(--border);
     border-radius: 12px;
-    background-color: var(#344653);
+    background-color: #344653;
     color: #f5f4f0;
 
     display: flex;
@@ -635,7 +635,7 @@ footer nav a:focus {
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease,
-        background-color 0.2 ease;
+        background-color 0.2s ease;
 }
 
 .contact-form input:focus,
@@ -1013,7 +1013,7 @@ footer nav a:focus {
 }
 
 .error-button:hover {
-    transform: translateY (-3px);
+    transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
@@ -1134,7 +1134,7 @@ html:not([data-theme="light"]) .theme-thumb {
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10);
+    transform: translateY(10px);
 
     transition:
         opacity 0.25s ease,
@@ -1155,7 +1155,7 @@ html:not([data-theme="light"]) .theme-thumb {
 }
 
 .back-to-top:focus-visible {
-    outline: 3px solid var (var(--accent));
+    outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
